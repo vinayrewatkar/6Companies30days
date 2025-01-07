@@ -1,22 +1,10 @@
-static ArrayList<ArrayList<String>> displayContacts(int n,
-        String contact[], String s) {
-    // code here
-    ArrayList<ArrayList<String>> result = new ArrayList<>();
-    Trie trie = new Trie();
-    for (String cont : contact) {
-        trie.insert(cont);
-    }
+package Amazon;static ArrayList<ArrayList<String>>displayContacts(int n,String contact[],String s){
+// code here
+ArrayList<ArrayList<String>>result=new ArrayList<>();Trie trie=new Trie();for(String cont:contact){trie.insert(cont);}
 
-    for (int i = 1; i <= s.length(); i++) {
-        ArrayList<String> list = trie.getWords(s.substring(0, i));
-        Collections.sort(list); // Sorting the list
-        list = new ArrayList<>(new LinkedHashSet<>(list)); // Removing duplicates while maintaining orders
-        if (list.isEmpty()) {
-            list.add("0");
-        }
-        result.add(list);
-    }
-    return result;
+for(int i=1;i<=s.length();i++){ArrayList<String>list=trie.getWords(s.substring(0,i));Collections.sort(list); // Sorting the list
+list=new ArrayList<>(new LinkedHashSet<>(list)); // Removing duplicates while maintaining orders
+if(list.isEmpty()){list.add("0");}result.add(list);}return result;
 
 }
 

@@ -1,3 +1,5 @@
+package Amazon;
+
 public class longestMountain {
     public int longestMountain(int[] arr) {
         if (arr.length < 3) {
